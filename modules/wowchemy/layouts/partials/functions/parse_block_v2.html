@@ -45,7 +45,7 @@
   {{ if $bg_img }}
     {{/* Exception for SVG as Hugo doesn't yet support image processing on SVG. */}}
     {{ if ne $bg_img.MediaType.SubType "svg" }}
-      {{ $bg_img = $bg_img.Fit "1920x1920 webp" }}
+      {{ $bg_img = $bg_img.Fit "1920x1920 png" }}
     {{ end }}
     {{ $style_bg = printf "%sbackground-image: url('%s');" $style_bg $bg_img.Permalink }}
   {{ else }}
